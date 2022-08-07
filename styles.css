@@ -2,3 +2,119 @@
     font-family: AudiTypeVF;
     src: url(./resources/fonts/AudiTypeVF_4.04.ttf);
 }
+
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --progressive-red: #f50537;
+    --dark-grey-1: #1a1a1a;
+    --dark-grey-2: #333333;
+    --mid-grey: #808080;
+    --light-grey: #cccccc;
+    --very-light-grey: #f2f2f2;
+    --nav-bar-width: 320px;
+    --font-wide-normal: "wght" 400, "wdth" 105;
+    --font-wide-bold: "wght" 700, "wdth" 105;
+    --font-extended-normal: "wght" 400, "wdth" 130;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: AudiTypeVF;
+}
+
+/* navbar styling */
+
+#logo_container {
+    padding: 30px;
+}
+
+#logo {
+    width: 150px;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--nav-bar-width);
+    height: 100vh;
+    background-color: var(--dark-grey-2);  
+    overflow: scroll;  
+}
+
+#navbar-nav {
+    margin: 0;
+}
+
+.nav-heading {
+    margin: 0 30px 10px 30px;
+    color:  rgba(225, 225, 225, 0.6);
+    font-size: 0.75rem;
+}
+
+#navbar-nav .nav-items {
+    margin: 0;
+    padding: 0;
+}
+
+#navbar-nav .nav-item {
+    list-style-type: none;
+}
+
+#navbar-nav .nav-link {
+    margin: 0 30px;
+    padding: 10px 0;
+}
+
+#navbar-nav .nav-group {
+    background-color: rgba(0, 0, 0, 0.15);
+    padding-left: 20px;
+}
+
+#navbar-nav .nav-link {
+    display:block;
+    height: 1.4rem;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    color: rgba(225, 225, 225, 0.8);
+    transition: color 0.15s linear;
+    font-variation-settings: var(--font-wide-normal);
+}
+
+#navbar-nav  .nav-link:link {
+    text-decoration: none;
+}
+
+#navbar-nav .nav-link:hover, #navbar .nav-link:active {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* main document styling */
+
+#main-doc {
+    position: absolute;
+    top: 0;
+    left: var(--nav-bar-width);
+    height: 100%;
+}
+
+/* hide but keep position in DOM for screen readers */
+.sr-only {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    -webkit-clip-path: inset(50%);
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    white-space: nowrap;
+    border: 0;  
+}

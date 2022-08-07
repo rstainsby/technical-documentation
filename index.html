@@ -9,17 +9,44 @@
     <body>
         <nav id="navbar">
             <header>
-                <img id="logo" src="./resources/logo/Audi_Rings_Medium/Audi_Rings_Medium_wh-RGB.svg" alt="Audi Logo">
-                <h3>Buttons</h3>
+                <div id="logo_container">
+                    <a id="logo_action" href="https://www.audi.com">
+                        <img id="logo" src="./resources/logo/Audi_Rings_Medium/Audi_Rings_Medium_wh-RGB.svg" alt="Audi Logo">
+                    </a>
+                </div>   
+                <!--This is a requirement for FreeCodeCamp but it doesn't work with the visual hierarchy so it's hidden-->
+                <h3 class="sr-only">Buttons</h3>
             </header>
-            <ul>
-                <a class="nav-link" href="#primary_button">Primary Button</a>
-                <a class="nav-link" href="#secondary_button">Secondary Button</a>
-                <a class="nav-link" href="#text_button">Text Button</a>
-                <a class="nav-link" href="#system_icon_button">System Icon Button</a>
-                <a class="nav-link" href="#floating_button">Floating Button</a>
-                <a class="nav-link" href="#stretched_and_sticky_button">Stretched and Sticky Button</a>
-            </ul>
+            <div id="navbar-nav">
+                <div class="nav-heading">
+                    Components
+                </div>
+                <ul class="nav-items">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#primary_button">Buttons</a>
+                        <ul class="nav-group">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#primary_button">Primary Button</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#secondary_button">Secondary Button</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#text_button">Text Button</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#system_icon_button">System Icon Button</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#floating_button">Floating Button</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#stretched_and_sticky_button">Stretched and Sticky Button</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </nav>
         <main id="main-doc">
             <!--Technical Documentation HERE-->
