@@ -27,6 +27,29 @@ body {
     font-family: AudiTypeVF;
 }
 
+h1, h2, h3, h4, h5, h6, p {
+    color:#000000;
+    font-size: inherit;
+    font-weight: 300;
+    font-variation-settings: "wdth" 130;
+    line-height: 39px;
+}
+
+h1 {
+    font-size: 4.5rem;
+}
+
+h2 {
+    color: var(--dark-grey-1);
+    font-size: 1.8rem;
+}
+
+p {
+    color: var(--dark-grey-2);
+    font-variation-settings: "wdth" 105;
+    font-size: 16px;
+}
+
 /* navbar styling */
 
 #nav_header_container {
