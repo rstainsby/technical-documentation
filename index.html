@@ -1,61 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <script>
+            function openNavbar() {
+                document.getElementById('navbar').classList.add('nav-open');
+                document.getElementById('open_nav_icon').classList.add('nav-open');
+                document.getElementById('main_doc').classList.add('nav-open');
+            }
+            
+            function closeNavbar() {
+                document.getElementById('navbar').classList.remove('nav-open');
+                document.getElementById('open_nav_icon').classList.remove('nav-open');
+                document.getElementById('main_doc').classList.remove('nav-open');
+            }
+        </script>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width; initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./styles.css">
         <title>Brand Apperance - Audi.com</title>
     </head>
     <body>
+        <div id="open_nav_icon" onclick="openNavbar()">
+            <svg width="60" height="60" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <title>
+                    off-canvas-large
+                </title>
+                <path d="M13,30.5 L35,30.5 M13,24.5 L35,24.5 M13,18.5 L35,18.5" stroke="currentColor" stroke-width="1" fill="none" fill-rule="evenodd"/>
+            </svg>
+        </div>
         <nav id="navbar">
-            <header>
-                <img id="logo" src="./resources/logo/Audi_Rings_Medium/Audi_Rings_Medium_wh-RGB.svg" alt="Audi Logo">
-                <h3>Buttons</h3>
-            </header>
-            <ul>
-                <a class="nav-link" href="#primary_button">Primary Button</a>
-                <a class="nav-link" href="#secondary_button">Secondary Button</a>
-                <a class="nav-link" href="#text_button">Text Button</a>
-                <a class="nav-link" href="#system_icon_button">System Icon Button</a>
-                <a class="nav-link" href="#floating_button">Floating Button</a>
-                <a class="nav-link" href="#stretched_and_sticky_button">Stretched and Sticky Button</a>
-            </ul>
+            <div id="navbar-nav">
+                <header>
+                    <div id="nav_header_container">
+                        <a id="logo_action" href="https://www.audi.com">
+                            <img id="logo" src="./resources/logo/Audi_Rings_Medium/Audi_Rings_Medium_wh-RGB.svg" alt="Audi Logo">
+                        </a>
+                        <div id="close_nav_icon" onclick="closeNavbar()">
+                            <svg width="60" height="60" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <title>
+                                    cancel-large
+                                </title>
+                                <path d="M31.6,15.4 L15.4,31.6 M15.4,15.4 L31.7,31.7" stroke="currentColor" stroke-width="1" fill="none" fill-rule="evenodd"/>
+                            </svg>
+                        </div>
+                    </div>   
+                    <!--This is a requirement for FreeCodeCamp but it doesn't work with the visual hierarchy so it's hidden-->
+                    <h3 class="sr-only">Buttons</h3>
+                </header>
+                <div class="nav-heading">
+                    Components
+                </div>
+                <ul class="nav-items">
+                        <a class="nav-link no-border" href="#primary_button">Buttons 
+                            <span class="dropdown-arrow">
+                                <svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                    <title>
+                                        arrow-down-small
+                                    </title>
+                                    <path d="M7 10L12.5 15.5 18 10" stroke="currentColor" stroke-width="1" fill="none" fill-rule="evenodd"/>
+                                </svg>
+                            </span>
+                        </a>
+                        <ul class="nav-group">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#primary_button">Primary Button</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#secondary_button">Secondary Button</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#text_button">Text Button</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#system_icon_button">System Icon Button</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#floating_button">Floating Button</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#stretched_and_sticky_button">Stretched and Sticky Button</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </nav>
-        <main id="main-doc">
+        <main id="main_doc">
             <!--Technical Documentation HERE-->
-            <section id="primary_button" class="main-section">
-                <header>
-                    <h2>Primary Button</h2>
-                </header>
-            </section>
-            <section id="secondary_button" class="main-section">
-                <header>
-                    <h2>Secondary Button</h2>
-                </header>                
-            </section>
-            <section id="text_button" class="main-section">
-                <header>
-                    <h2>Text Button</h2>
-                </header>
-            </section>
-            <section id="system_icon_button" class="main-section">
-                <header>
-                    <h2>System Icon Button</h2>
-                </header>
-            </section>
-            <section id="floating_button" class="main-section">
-                <header>
-                    <h2>Floating Button</h2>
-                </header>
-            </section>
-            <section id="stretched_and_sticky_button" class="main-section">
-                <header>
-                    <h2>Stretched and Sticky Button</h2>
-                </header>
-            </section>
+            <div id="main_doc_content">
+                <section id="primary_button" class="main-section">
+                    <header>
+                        <h2>Primary Button</h2>
+                    </header>
+                </section>
+                <section id="secondary_button" class="main-section">
+                    <header>
+                        <h2>Secondary Button</h2>
+                    </header>                
+                </section>
+                <section id="text_button" class="main-section">
+                    <header>
+                        <h2>Text Button</h2>
+                    </header>
+                </section>
+                <section id="system_icon_button" class="main-section">
+                    <header>
+                        <h2>System Icon Button</h2>
+                    </header>
+                </section>
+                <section id="floating_button" class="main-section">
+                    <header>
+                        <h2>Floating Button</h2>
+                    </header>
+                </section>
+                <section id="stretched_and_sticky_button" class="main-section">
+                    <header>
+                        <h2>Stretched and Sticky Button</h2>
+                    </header>
+                </section>
+            </div>
         </main>
         <footer>
             
         </footer>
+
     </body>
 </html>
